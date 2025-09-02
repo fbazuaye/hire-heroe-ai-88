@@ -71,9 +71,15 @@ const Footer = () => {
           <p className="text-gray-300 text-sm">
             © 2024 CareerAI. All rights reserved.
           </p>
-          <p className="text-gray-300 text-sm mt-4 md:mt-0">
-            Made with ❤️ for job seekers worldwide
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-2 mt-4 md:mt-0">
+            <p className="text-gray-300 text-sm">
+              Made with ❤️ for job seekers worldwide
+            </p>
+            <span className="hidden md:inline text-gray-500">•</span>
+            <p className="text-gray-300 text-sm">
+              Designed and powered By LiveGig Ltd
+            </p>
+          </div>
         </div>
       </div>
     </footer>
