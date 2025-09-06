@@ -1,11 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Brain, Menu } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center space-x-2">
+        <div 
+          className="flex items-center space-x-2 cursor-pointer" 
+          onClick={() => navigate("/")}
+        >
           <div className="flex items-center justify-center w-8 h-8 bg-gradient-primary rounded-lg">
             <Brain className="h-5 w-5 text-white" />
           </div>
@@ -25,10 +31,10 @@ const Header = () => {
         </nav>
         
         <div className="flex items-center space-x-4">
-          <Button variant="ghost" className="hidden md:inline-flex">
+          <Button variant="ghost" className="hidden md:inline-flex" onClick={() => navigate("/auth")}>
             Sign In
           </Button>
-          <Button variant="hero">
+          <Button variant="hero" onClick={() => navigate("/auth")}>
             Get Started Free
           </Button>
           <Button variant="ghost" size="icon" className="md:hidden">
